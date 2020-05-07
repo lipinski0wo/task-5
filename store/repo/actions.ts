@@ -52,48 +52,11 @@ export const getUser = (
     dispatch({
       type: ADD_LOADING,
     })
-    // const {
-    //   data,
-    // }: {
-    //   data: IGetUserAPI
-    // } = await axios.get(`${config.URL}/users/${userName}`)
-    const data = {
-      avatar_url: 'https://avatars1.githubusercontent.com/u/2499845?v=4',
-      bio:
-        'A venture building company. Having fun building scalable businesses.',
-      blog: 'http://appnroll.com',
-      company: null,
-      created_at: '2012-10-06T10:50:28Z',
-      email: 'hello@appnroll.com',
-      events_url: 'https://api.github.com/users/Appnroll/events{/privacy}',
-      followers: 0,
-      followers_url: 'https://api.github.com/users/Appnroll/followers',
-      following: 0,
-      following_url:
-        'https://api.github.com/users/Appnroll/following{/other_user}',
-      gists_url: 'https://api.github.com/users/Appnroll/gists{/gist_id}',
-      gravatar_id: '',
-      hireable: null,
-      html_url: 'https://github.com/Appnroll',
-      id: '2499845',
-      location: 'Warsaw, Poland',
-      login: 'Appnroll',
-      name: "App'n'roll",
-      node_id: 'MDEyOk9yZ2FuaXphdGlvbjI0OTk4NDU=',
-      organizations_url: 'https://api.github.com/users/Appnroll/orgs',
-      public_gists: 0,
-      public_repos: 26,
-      received_events_url:
-        'https://api.github.com/users/Appnroll/received_events',
-      repos_url: 'https://api.github.com/users/Appnroll/repos',
-      site_admin: false,
-      starred_url:
-        'https://api.github.com/users/Appnroll/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/Appnroll/subscriptions',
-      type: 'Organization',
-      updated_at: '2020-04-09T11:31:05Z',
-      url: 'https://api.github.com/users/Appnroll',
-    }
+    const {
+      data,
+    }: {
+      data: IGetUserAPI
+    } = await axios.get(`${config.URL}/users/${userName}`)
 
     const payload: IUser = {
       avatar_url: data.avatar_url,
@@ -131,8 +94,7 @@ export const getUserRepos = (
     dispatch({
       type: ADD_LOADING,
     })
-    // const { data } = await axios.get(`${config.URL}/users/${userName}/repos`)
-    let data = JSON.parse(localStorage.getItem('myCat'))
+    const { data } = await axios.get(`${config.URL}/users/${userName}/repos`)
 
     const repoSubscriptions = getSubscriptions()
 

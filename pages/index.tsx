@@ -13,10 +13,12 @@ import { IRepo } from '../store/repo/types'
 
 const Home = () => {
   const dispatch = useDispatch()
+
   useEffect(() => {
     dispatch(getUser('Appnroll'))
     dispatch(getUserRepos('Appnroll'))
   }, [dispatch])
+
   const user = useSelector((state: AppState) => state.repo.user)
   const repos = useSelector((state: AppState) => state.repo.repos)
 

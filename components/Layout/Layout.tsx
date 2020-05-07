@@ -1,4 +1,4 @@
-import React, { SFC, Fragment } from 'react'
+import React, { SFC } from 'react'
 import Fixed from '../Fixed/Fixed'
 import styled from 'styled-components'
 

@@ -1,4 +1,4 @@
-import React, { SFC, useMemo } from 'react'
+import React, { SFC } from 'react'
 import styled from 'styled-components'
 import IconSet from '../General/IconSet'
 

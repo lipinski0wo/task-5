@@ -28,12 +28,12 @@ const CloseStyled = styled(Close)`
   cursor: pointer;
 `
 
-interface IMessageProps {
+interface IProps {
   msg: IMsg
   index: number
 }
 
-const Message: SFC<IMessageProps> = ({ msg, index }) => {
+const Message: SFC<IProps> = ({ msg, index }) => {
   const dispatch = useDispatch()
 
   return (

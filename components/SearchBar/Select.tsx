@@ -1,4 +1,4 @@
-import React, { SFC, ChangeEvent } from 'react'
+import React, { SFC } from 'react'
 import styled from 'styled-components'
 
 const StyledSelect = styled.select`

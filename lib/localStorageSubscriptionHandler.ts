@@ -1,6 +1,6 @@
 export const setSubscription = (id: number, value: boolean): void => {
-  let ids = getSubscriptions()
-  let index = ids.indexOf(id)
+  let ids: number[] = getSubscriptions()
+  let index: number = ids.indexOf(id)
   if (index === -1 && value) {
     ids.push(id)
   } else if (index !== -1 && !value) {
